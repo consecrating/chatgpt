@@ -3,3 +3,6 @@ output/
 *.log
 .DS_Store
 .env
+
+.fontsrc/
+fonts/_preview.png
