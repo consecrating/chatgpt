@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PostBrain content brief",
+  "description": "The plain-language input the Brain turns into a professional Instagram post. Only `headline` is required; everything else is optional and improves the result.",
+  "type": "object",
+  "required": ["headline"],
+  "additionalProperties": false,
+  "properties": {
+    "headline": {
+      "type": "string",
+      "description": "The one big line. Keep it <= 8 words for poster impact."
+    },
+    "eyebrow": {
+      "type": "string",
+      "description": "Small kicker/category label shown above the headline, e.g. 'CASE STUDY'."
+    },
+    "subtext": {
+      "type": "string",
+      "description": "One supporting sentence. In a quote card this holds the attribution."
+    },
+    "bullets": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 6,
+      "description": "Provide these to get a numbered-list layout. Keep each <= 6 words."
+    },
+    "stat": {
+      "type": "object",
+      "description": "Provide to get the big-number 'stat spotlight' layout.",
+      "required": ["value"],
+      "properties": {
+        "value": { "type": "string", "description": "e.g. '+312%'" },
+        "label": { "type": "string", "description": "what the number means" }
+      }
+    },
+    "cta": { "type": "string", "description": "Call-to-action pill text, e.g. 'Save this post'." },
+    "handle": { "type": "string", "description": "@handle shown in the footer." },
+    "industry": {
+      "type": "string",
+      "description": "Free text (fitness, saas, wellness, ai, food, event, ...). Steers palette + fonts."
+    },
+    "mood": {
+      "type": "string",
+      "description": "Optional explicit mood: bold, elegant, playful, minimal, premium, energetic, calm, ..."
+    },
+    "format": {
+      "type": "string",
+      "enum": ["square", "portrait", "story"],
+      "default": "portrait"
+    },
+    "palette": {
+      "type": "string",
+      "description": "Hard override. One of the palette ids in src/design-system/palettes.js."
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["hero-centered", "editorial-left", "listicle", "stat-spotlight", "quote-card"],
+      "description": "Hard override of the auto-selected layout."
+    },
+    "pairing": {
+      "type": "string",
+      "description": "Hard override. One of the font pairing ids in src/design-system/typography.js."
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Reproducibility knob. Same brief + seed => same design; change it to explore variations."
+    }
+  }
+}

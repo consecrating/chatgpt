@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  html, body { margin: 0; padding: 0; }
+  .canvas {
+    position: relative;
+    width: 1080px; height: 1350px;
+    background: linear-gradient(135deg,#03121A 0%,#0A2E3A 55%,#0E4C55 100%);
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    z-index: 2;
+    width: 100%; height: 100%;
+    padding: 81px;
+    display: flex; flex-direction: column;
+    gap: 32px;
+  }
+  .content { flex: 1; display: flex; min-height: 0; overflow: hidden; }
+  .content > div { width: 100%; }
+  .brandbar { display:flex; align-items:center; justify-content: space-between; }
+</style>
+</head>
+<body>
+  <div class="canvas" id="canvas">
+    <div style="position:absolute;left:-130px;top:-108px;width:540px;height:540px;
+    background:#28E0C8;opacity:0.28;border-radius:50%;
+    filter:blur(245px);"></div><div style="position:absolute;left:670px;top:891px;width:594px;height:594px;
+    background:#5B8CFF;opacity:0.22;border-radius:50%;
+    filter:blur(270px);"></div>
+    <div class="stage">
+      <div class="content">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+    text-align:left;gap:35px;height:100%;">
+    <div style="display:inline-flex;align-items:center;gap:15px;
+    align-self:flex-start;
+    padding:17px 32px;border-radius:999px;
+    background:#28E0C8;color:#03121A;
+    font-family:'Inter', sans-serif;font-weight:600;letter-spacing:0.14em;
+    text-transform:uppercase;font-size:22px;">
+    AI ENGINEERING
+  </div>
+    <div style="width:130px;height:13px;background:#5B8CFF;border-radius:999px;"></div>
+    <h1 style="margin:0;font-family:'Space Grotesk', sans-serif;font-weight:700;
+      font-size:124px;line-height:1.0;letter-spacing:-0.02em;color:#E6FBFF;
+      max-width:94%;">Your agents are only as good as your <span style="color:#5B8CFF;">context</span></h1>
+    <p style="margin:0;max-width:82%;font-family:'Inter', sans-serif;
+             font-size:41px;line-height:1.45;color:#84B4C2;">Context engineering is the new prompt engineering. Here is the mental model.</p>
+    <div style="margin-top:16px;"><div style="display:inline-flex;align-items:center;gap:17px;
+    padding:26px 45px;border-radius:999px;
+    background:#5B8CFF;color:#FFFFFF;
+    font-family:'Inter', sans-serif;font-weight:600;
+    font-size:35px;box-shadow:0 24px 70px rgba(0,0,0,0.55);">
+    Read the thread
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+      style="display:block;"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FFFFFF"
+      stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div></div>
+  </div></div>
+      <div class="brandbar">
+        <div style="display:flex;align-items:center;gap:22px;
+    font-family:'Inter', sans-serif;color:#84B4C2;
+    font-size:26px;font-weight:500;">
+    <span style="width:30px;height:30px;border-radius:50%;
+      background:#5B8CFF;display:inline-block;"></span>
+    @ai.notes
+  </div>
+        <div style="display:flex;gap:13px;align-items:center;opacity:0.7;">
+          <span style="width:22px;height:22px;border-radius:50%;background:#84B4C2;"></span>
+          <span style="width:22px;height:22px;border-radius:50%;background:#84B4C2;"></span>
+          <span style="width:22px;height:22px;border-radius:50%;background:#5B8CFF;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

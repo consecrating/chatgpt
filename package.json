@@ -1,0 +1,25 @@
+{
+  "name": "postbrain",
+  "version": "1.0.0",
+  "description": "An AI Brain + rendering engine that turns a content brief into a professional, modern Instagram post. Fixes ChatGPT/DALL-E's tiny fonts, dated colors, and weak layouts by separating design decisions (the Brain) from pixel-perfect rendering (HTML/CSS).",
+  "type": "module",
+  "bin": {
+    "postbrain": "cli.js"
+  },
+  "scripts": {
+    "generate": "node cli.js",
+    "examples": "node scripts/build-examples.js"
+  },
+  "keywords": [
+    "instagram",
+    "design-system",
+    "ai",
+    "content",
+    "social-media",
+    "generative-design"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.47.0"
+  }
+}
