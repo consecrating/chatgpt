@@ -64,6 +64,20 @@ FINISH: ~7.5% safe-area padding, one accent color used sparingly (e.g., color th
 word or one key word of the headline), rounded pill button for the CTA, generous
 whitespace, strong contrast. No clip-art, no clutter, no emoji spam.
 
+VISUAL RICHNESS (avoid a flat, "too basic" template look). Keep the text limited and
+large, but make the IMAGE rich through imagery and ornament — never through more text:
+- Layered depth: organic shapes/waves, soft realistic shadows under objects, depth of
+  field, gentle glow/bokeh, subtle background texture (handmade paper, silk, grain).
+- Themed ornamentation that matches the occasion/brand: e.g., for festivals use mandala
+  or paisley motifs, gold-foil accents, decorative filigree in corners, thin gold
+  dividers, marigold petals, a softly glowing diya, jasmine, rice grains, kumkum, and
+  faint line-art landmarks. For tech/brand use subtle grids, gradient meshes, glassy
+  cards, glows.
+- Micro-details: sparkles, dotted flight-path lines, small circular badge icons.
+- Rich, layered color (gradients + a deep secondary tone), not a single flat fill.
+Aim for "premium editorial poster", not "plain slide". Detail lives in the decoration;
+the text stays big and minimal.
+
 ========================  MODE A RENDER RECIPE (Pillow)  ========================
 When rendering in Code Interpreter: solid or vertical-gradient background; optional small
 eyebrow pill; wrapped headline with one key word in the accent color; one subline in the
