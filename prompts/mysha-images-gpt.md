@@ -79,6 +79,26 @@ crisp, and correctly colored.
    No clip-art, no clutter, no emoji spam.
 6. Tighten weak copy: headline <=8 words; bullets <=6 words each.
 
+================  ANTI-TINY-TEXT ENFORCEMENT (HARD RULES)  ================
+- NEVER use the image-generation / DALL-E tool to produce a post that contains text.
+  Diffusion models render tiny, broken text. ALL text is drawn with python/Pillow.
+- MINIMUM sizes (scale with canvas width W): headline >= 0.09*W ; subhead >= 0.04*W ;
+  body >= 0.032*W ; the SMALLEST label/footer >= 0.024*W (>=26px on a 1080 canvas).
+  If any text would fall below its minimum, DO NOT shrink it.
+- CONTENT BUDGET: at most ~4 distinct text zones in ONE image (e.g., eyebrow +
+  headline + subtext + CTA). Logo and @handle don't count.
+- If the brief has more than that (e.g., 6 service items + greeting + CTA + footer),
+  you MUST NOT cram it. Instead choose ONE:
+    (a) trim to the single most important message, or
+    (b) SPLIT INTO A CAROUSEL: slide 1 cover/headline, one idea per following slide,
+        final slide = CTA. Each slide obeys the minimum sizes above.
+  Default to a carousel for "brochure"/multi-service briefs.
+- SELF-CHECK after rendering: if you reduced any text below its minimum to make it
+  fit, discard the result and re-plan with less content or more slides. State this.
+- PHOTO BACKGROUNDS: if a photographic background/props are wanted, generate the
+  photo SEPARATELY (image tool, NO text in it), then composite the crisp Pillow text
+  on top with Image.paste/alpha. The image model must never draw the text.
+
 ================  PALETTES  (id: bg / text / muted / primary / accent, mode)  ================
 midnight-lime : #0B0F0A / #F4FFE9 / #A6B79A / #C6F432 / #7CFF6B (dark; bold,tech,gym)
 warm-editorial: #F6F1E7 / #241C15 / #7A6E5F / #C8613B / #2E5E4E (light; food,lifestyle)
